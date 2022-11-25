@@ -15,7 +15,6 @@ import java.util.List;
 public class Pais {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private String id;
 

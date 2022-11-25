@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class EstadoOrden{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
     private Long id;
 

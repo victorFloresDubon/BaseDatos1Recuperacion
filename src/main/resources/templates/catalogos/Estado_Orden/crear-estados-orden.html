@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-  <title>Roles de usuario</title>
+  <title>Estados de Orden</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -15,9 +15,9 @@
       <h1>Nuevo Estado de Orden</h1>
     </div>
     <div class="card-body">
-      <form th:action="@{/estado}" method="post" th:object="${estado}">
+      <form th:action="@{/catalogos/estados-orden}" method="post" th:object="${estadoOrden}">
         <div class="form-group">
-          <label for="descripcion">Nombre</label>
+          <label for="descripcion">Descripción</label>
           <input th:field="*{descripcion}" id="descripcion" class="form-control" type="text" aria-label="default input example" placeholder="Escriba el nombre del estado" required>
         </div>
         <br>

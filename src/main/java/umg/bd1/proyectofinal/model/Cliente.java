@@ -25,4 +25,5 @@ public class Cliente {
 
     @Column(name = "FECHA_INGRESO")
     private Date fechaIngreso;
+
 }
