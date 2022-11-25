@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FacturacionController {
 
-    @GetMapping("facturacion/factura")
+    @GetMapping("/facturacion/factura")
     public String getFormularioFactura(Model modelo){
         return "Facturacion/crear-facturacion";
     }
