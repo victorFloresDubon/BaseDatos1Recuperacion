@@ -25,20 +25,20 @@
         <!--Encabezado de la tabla-->
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
             <th scope="col"></th>
         </tr>
         </thead>
         <!--Cuerpo de la tabla (Registros)-->
         <tbody>
-        <tr th:each="estado : ${estados}">
+        <tr th:each="estado : ${estadosOrden}">
             <!--Área de los campos-->
             <td th:text="${estado.id}" class="text-end">ID</td>
-            <td th:text="${estado.descripcion}">Nombre</td>
+            <td th:text="${estado.descripcion}">Descripción</td>
             <td>
                 <!--Botones de acción (Editar y Eliminar)-->
-                <a th:href="@{estado/editar(id=${rol.id})}" class="btn btn-warning">Editar</a>
-                <a th:href="@{estado/borrar(id=${rol.id})}" class="btn btn-danger">Eliminar</a>
+                <a th:href="@{estados-orden/editar(id=${estado.id})}" class="btn btn-warning">Editar</a>
+                <a th:href="@{estados-orden/borrar(id=${estado.id})}" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
     </table>

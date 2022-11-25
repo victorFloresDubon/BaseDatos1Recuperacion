@@ -32,7 +32,7 @@ public class EstadoOrdenController {
     @PostMapping("/catalogos/estados-orden")
     public String save(@ModelAttribute("estadoOrden") EstadoOrden estadoOrden) {
         estadoOrdenService.save(estadoOrden);
-        return "redirect:/estados-orden";
+        return "redirect:/catalogos/estados-orden";
     }
 
     @GetMapping("/catalogos/estados-orden/editar")
@@ -52,13 +52,13 @@ public class EstadoOrdenController {
         estadoOrdenExist.setId(id);
         estadoOrdenExist.setDescripcion(estadoOrden.getDescripcion());
         estadoOrdenService.save(estadoOrdenExist);
-        return "redirect:/estados-orden";
+        return "redirect:/catalogos/estados-orden";
     }
 
     @GetMapping("/catalogos/estados-orden/borrar")
     public String delete(@RequestParam(name = "id") Long id) {
         estadoOrdenService.delete(id);
-        return "redirect:/estados-orden";
+        return "redirect:/catalogos/estados-orden";
     }
 
 }

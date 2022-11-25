@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class EstadoTracking {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "ESTADO_TRACKING_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "ESTADO_TRACKING_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 

@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class EstadoOrden{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "ESTADO_ORDEN_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "ESTADO_ORDEN_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 

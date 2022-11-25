@@ -15,19 +15,19 @@
       <h1>Editar estado de la orden</h1>
     </div>
     <div class="card-body">
-      <form th:action="@{/estado/edit(id=${estado.id})}" method="post" th:object="${estado}">
+      <form th:action="@{/catalogos/estados-orden/edit(id=${estadoOrden.id})}" method="post" th:object="${estadoOrden}">
         <div class="form-group">
           <label for="id">ID</label>
           <input th:field="*{id}" id="id" class="form-control" type="text" aria-label="default input example" readonly>
         </div>
         <div class="form-group">
-          <label for="descripcion">Nombre</label>
+          <label for="descripcion">Descripción</label>
           <input th:field="*{descripcion}" id="descripcion" class="form-control" type="text" aria-label="default input example" placeholder="Escriba el nombre del estado" required>
         </div>
         <br>
         <div class="box-footer d-flex justify-content-center">
           <button class="btn btn-primary">Guardar</button>
-          <a th:href="@{/estado}" class="btn btn-danger">Cancelar</a>
+          <a th:href="@{/catalogos/estados-orden}" class="btn btn-danger">Cancelar</a>
         </div>
       </form>
     </div>
