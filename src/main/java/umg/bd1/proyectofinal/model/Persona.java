@@ -35,4 +35,8 @@ public class Persona {
     @Column(name = "NIT")
     private String nit;
 
+    public String getNombreCompleto(){
+        return String.format("%s %s %s %s", this.nombre1, this.nombre2, this.apellido1, this.apellido2);
+    }
+
 }

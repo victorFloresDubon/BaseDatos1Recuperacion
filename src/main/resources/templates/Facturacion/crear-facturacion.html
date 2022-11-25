@@ -16,10 +16,38 @@
         </div>
         <div class="card-body">
             <form th:action="@{/facturacion}" method="post" th:object="${factura}">
-                <div class="form-group">
-                    <label for="descripcion">Nombre</label>
-                    <input th:field="*{factu}" id="descripcion" class="form-control" type="text" aria-label="default input example" placeholder="Escriba la nueva factura" required>
-                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione una sucursal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione una sucursal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione el tipo de transaccion</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione una sucursal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione una sucursal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Seleccione el tipo de transaccion</option>
+                        </select>
+                    </div>
+                <div>
                 <br>
                 <!--Detalle de la factura-->
                 <div class="container">
@@ -38,7 +66,7 @@
                         </thead>
                         <!--Cuerpo de la tabla-->
                         <tbody>
-                        <tr th:each="item : ${factura.detalles}">
+                        <tr th:each="item : ${factura.detalles}" th:if="${!factura.detalles?.isEmpty()}">
                             <td th:text="${item.linea}">itemNo</td>
                             <td th:text="${item.medicamento.id}">Producto</td>
                             <td th:text="${item.unidades}">Unidades</td>
@@ -55,7 +83,7 @@
                     </table>
                 </div>
                 <!--Botón condicional que contenga almenos un detalle-->
-                <div class="box-footer d-flex justify-content-center" th:if="${factura.detalles.size() != 0}">
+                <div class="box-footer d-flex justify-content-center" th:if="${factura.detalles?.size() != 0}">
                     <button class="btn btn-primary">Guardar</button>
                 </div>
             </form>
