@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class Sucursal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "SUCURSAL_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "SUCURSAL_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 

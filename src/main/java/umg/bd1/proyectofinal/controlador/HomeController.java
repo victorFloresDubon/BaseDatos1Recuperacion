@@ -13,6 +13,6 @@ public class HomeController {
 
     @GetMapping("/menu")
     public String getMenu() {
-        return "menu";
+        return "administracion/Menu/menu";
     }
 }

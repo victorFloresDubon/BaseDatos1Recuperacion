@@ -15,6 +15,23 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Catálogos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" th:href="@{catalogos/tipo-medicamento}">Tipos de medicamento</a></li>
+                    <li><a class="dropdown-item" th:href="@{catalogos/tipo-laboratorio}">Tipos de laboratorio</a></li>
+                    <li><a class="dropdown-item" href="">Marcas de medicamento</a></li>
+                    <li><a class="dropdown-item" href="">Pricipios activos</a></li>
+                    <li><a class="dropdown-item" th:href= "@{catalogos/estados-orden}">Estados de órdenes</a></li>
+                    <li><a class="dropdown-item" th:href="@{catalogos/estados-tracking}">Estados Tracking</a></li>
+                    <li><a class="dropdown-item" href="">Ubicaciones Geográficas</a></li>
+                    <li><a class="dropdown-item" href="">Sucursales</a></li>
+                    <li><a class="dropdown-item" href="">Tipos de transacciones de inventario</a></li>
+                    <li><a class="dropdown-item" th:href="@{catalogos/tipo-pago}">Formas de pago</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Medicamentos
               </a>
                 <ul class="dropdown-menu">
@@ -44,6 +61,7 @@
                 Crear
               </a>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" th:href="@{roles}">Crear rol de usuario</a></li>
                     <li><a class="dropdown-item" href="../create-registers/create_user.html">Crear usuario</a></li>
                     <li>
                         <hr class="dropdown-divider">
