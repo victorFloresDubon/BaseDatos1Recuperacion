@@ -24,8 +24,9 @@ public class FacturacionController {
     @Autowired SucursalService sucursalService;
 
     @GetMapping("/facturacion/factura")
-    public String getFormularioFactura(Model modelo, @ModelAttribute(name = "factura") Transaccion facturaActual){
+    public String getFormularioFactura(Model modelo){
         // Si no hay un documento actual entonces se carga la información inicial
+        Transaccion facturaActual = (Transaccion) modelo.getAttribute("factura");
         if(facturaActual == null) {
             Transaccion factura = new Transaccion();
             modelo.addAttribute("factura", factura);

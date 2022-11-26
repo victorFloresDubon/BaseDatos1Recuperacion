@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "CLIENTE")
+@Table(name = "SUCURSAL")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sucursal {
@@ -27,12 +27,5 @@ public class Sucursal {
     @Column(name = "ABREVIATURA")
     private String abreviatura;
 
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    /*@JoinColumns(value = {
-            @JoinColumn(name = "COD_PAIS", referencedColumnName = "COD_PAIS"),
-            @JoinColumn(name = "COD_DEPTO", referencedColumnName = "COD_DEPTO"),
-            @JoinColumn(name = "COD_MUNICIPIO", referencedColumnName = "COD_MUNICIPIO"),
-            @JoinColumn(name = "COD_ZONA", referencedColumnName = "COD_ZONA")
-    })*/
-    private Zona zona;
+
 }
