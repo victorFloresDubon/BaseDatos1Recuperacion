@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class TipoMedicamento {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "TIPO_MEDICAMENTO_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "TIPO_MEDICAMENTO_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 

@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class PrincipioActivo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "PRINCIPIO_ACTIVO_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "PRINCIPIO_ACTIVO_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 
