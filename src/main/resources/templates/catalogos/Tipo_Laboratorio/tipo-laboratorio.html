@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Tipos de Laboratorio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row text-center">
+        <h1>Tipos de Laboratorio</h1>
+    </div>
+    <div class="row text-end">
+        <div class="col-lg-3">
+            <a th:href="@{/catalogos/tipo-laboratorio/nuevo}" class="btn btn-primary btn-sm mb3">Agregar</a>
+        </div>
+    </div>
+    <br>
+    <!--Vista de la tabla-->
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark text-center">
+        <!--Encabezado de la tabla-->
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descripción</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <!--Cuerpo de la tabla (Registros)-->
+        <tbody>
+        <tr th:each="tipo : ${tiposLaboratorio}">
+            <!--Área de los campos-->
+            <td th:text="${tipo.id}" class="text-end">ID</td>
+            <td th:text="${tipo.descripcion}">Descripción</td>
+            <td>
+                <!--Botones de acción (Editar y Eliminar)-->
+                <a th:href="@{tipo-laboratorio/editar(id=${tipo.id})}" class="btn btn-warning">Editar</a>
+                <a th:href="@{tipo-laboratorio/borrar(id=${tipo.id})}" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

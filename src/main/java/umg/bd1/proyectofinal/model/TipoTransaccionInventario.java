@@ -14,7 +14,14 @@ import javax.persistence.*;
 public class TipoTransaccionInventario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "TTI_SEQ"
+    )
+    @SequenceGenerator(
+            name = "TTI_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 

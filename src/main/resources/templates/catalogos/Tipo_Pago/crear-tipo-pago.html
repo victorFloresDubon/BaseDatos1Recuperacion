@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <title>Tipo Medicamento</title>
+    <title>Forma de Pago</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div class="container px-5 py-5 mx">
     <div class="card">
         <div class="row text-center">
-            <h1>Nuevo tipo de Medicamento</h1>
+            <h1>Nueva forma de pago</h1>
         </div>
         <div class="card-body">
-            <form th:action="@{/catalogos/tipo-medicamento}" method="post" th:object="${tipoMedicamento}">
+            <form th:action="@{/catalogos/tipo-pago}" method="post" th:object="${TipoPago}">
                 <div class="form-group">
                     <label for="descripcion">Nombre</label>
-                    <input th:field="*{descripcion}" id="descripcion" class="form-control" type="text" aria-label="default input example" placeholder="Escriba el nombre del medicamento" required>
+                    <input th:field="*{descripcion}" id="descripcion" class="form-control" type="text" aria-label="default input example" placeholder="Escriba el nombre de la forma de pago" required>
                 </div>
                 <br>
                 <div class="box-footer d-flex justify-content-center">

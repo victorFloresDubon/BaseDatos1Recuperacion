@@ -14,8 +14,14 @@ import javax.persistence.*;
 public class TipoLaboratorio {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "TIPO_LABORATORIO_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "TIPO_LABORATORIO_ID_SEQ",
+            allocationSize = 1
+    )
     private Long id;
 
     @Column(name = "DESCRIPCION")
