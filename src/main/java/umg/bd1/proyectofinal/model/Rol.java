@@ -29,6 +29,7 @@ public class Rol {
     @Column(name = "NOMBRE_ROL")
     private String descripcion;
 
+    /*
     @ManyToMany
     @JoinTable(
             name = "ROL_OPCION",
@@ -40,4 +41,6 @@ public class Rol {
             }
     )
     private List<OpcionMenu> opciones;
+
+     */
 }
