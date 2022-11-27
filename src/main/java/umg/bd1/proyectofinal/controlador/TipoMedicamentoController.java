@@ -32,7 +32,7 @@ public class TipoMedicamentoController {
     @PostMapping("/catalogos/tipo-medicamento")
     public String save(@ModelAttribute("tipoMedicamento") TipoMedicamento tipoMedicamento) {
         tipoMedicamentoService.save(tipoMedicamento);
-        return "redirect:catalogos/tipo-medicamento";
+        return "redirect:/catalogos/tipo-medicamento";
     }
 
     @GetMapping("/catalogos/tipo-medicamento/editar")
@@ -58,7 +58,7 @@ public class TipoMedicamentoController {
     @GetMapping("/catalogos/tipo-medicamento/borrar")
     public String delete(@RequestParam(name = "id") Long id) {
         tipoMedicamentoService.delete(id);
-        return "redirect:catalogos/tipo-medicamento";
+        return "redirect:/catalogos/tipo-medicamento";
     }
 
 }

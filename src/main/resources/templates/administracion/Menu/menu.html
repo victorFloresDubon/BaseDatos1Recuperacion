@@ -20,17 +20,17 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" th:href="@{catalogos/tipo-medicamento}">Tipos de medicamento</a></li>
                     <li><a class="dropdown-item" th:href="@{catalogos/tipo-laboratorio}">Tipos de laboratorio</a></li>
-                    <li><a class="dropdown-item" href="">Marcas de medicamento</a></li>
-                    <li><a class="dropdown-item" href="">Pricipios activos</a></li>
+                    <!--li><a class="dropdown-item" href="">Marcas de medicamento</a></li-->
+                    <!--li><a class="dropdown-item" href="">Pricipios activos</a></li-->
                     <li><a class="dropdown-item" th:href= "@{catalogos/estados-orden}">Estados de órdenes</a></li>
                     <li><a class="dropdown-item" th:href="@{catalogos/estados-tracking}">Estados Tracking</a></li>
-                    <li><a class="dropdown-item" href="">Ubicaciones Geográficas</a></li>
-                    <li><a class="dropdown-item" href="">Sucursales</a></li>
-                    <li><a class="dropdown-item" href="">Tipos de transacciones de inventario</a></li>
+                    <!--li><a class="dropdown-item" href="">Ubicaciones Geográficas</a></li-->
+                    <!--li><a class="dropdown-item" href="">Sucursales</a></li-->
+                    <!--li><a class="dropdown-item" href="">Tipos de transacciones de inventario</a></li-->
                     <li><a class="dropdown-item" th:href="@{catalogos/tipo-pago}">Formas de pago</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+            <!--li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Medicamentos
               </a>
@@ -42,8 +42,8 @@
                     </li>
                     <li><a class="dropdown-item" href="#">Ver medicamentos</a></li>
                 </ul>
-            </li>
-            <li class="nav-item dropdown">
+            </li-->
+            <!--li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Laboratorios
               </a>
@@ -55,7 +55,7 @@
                     </li>
                     <li><a class="dropdown-item" href="#">Ver laboratorio</a></li>
                 </ul>
-            </li>
+            </li-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Crear
@@ -63,13 +63,13 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" th:href="@{roles}">Crear rol de usuario</a></li>
                     <li><a class="dropdown-item" th:href="@{crear/usuarios}">Crear usuario</a></li>
-                    <li>
+                    <!--li>
                         <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Crear empleado</a></li>
+                    </li-->
+                    <!--li><a class="dropdown-item" href="#">Crear empleado</a></li-->
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+            <!--li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Facturas
               </a>
@@ -92,11 +92,14 @@
                     </li>
                     <li><a class="dropdown-item" href="#">Detalles de envio</a></li>
                 </ul>
-            </li>
+            </li-->
         </ul>
         <span class="navbar-text">
               Farmacia UMG
-            </span>
+        </span>
+        <a class="btn btn-danger" th:href="@{/login}">
+              Cerrar Sesión
+        </a>
         </div>
         </div>
     </nav>
