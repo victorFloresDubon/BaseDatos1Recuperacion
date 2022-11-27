@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -15,7 +16,14 @@ import java.util.List;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "USUARIO_ID_SEQ"
+    )
+    @SequenceGenerator(
+            name = "USUARIO_ID_SEQ",
+            allocationSize = 1
+    )
     @Column(name = "ID")
     private Long id;
 
@@ -32,4 +40,13 @@ public class Usuario {
             inverseJoinColumns = @JoinColumn(name = "ID_ROL")
     )
     private List<Rol> roles;
+
+    public void addRol(Rol rol){
+        if (rol != null){
+            if(roles == null){
+                roles = new ArrayList<>();
+            }
+            roles.add(rol);
+        }
+    }
 }
