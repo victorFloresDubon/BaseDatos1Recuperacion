@@ -44,7 +44,7 @@ public class RolController {
         Rol rolExistente = rolService.get(id);
         rolExistente.setId(id);
         rolExistente.setDescripcion(rol.getDescripcion());
-        rolExistente.setOpciones(rol.getOpciones());
+        //rolExistente.setOpciones(rol.getOpciones());
         rolService.save(rolExistente);
         return "redirect:/roles";
     }
